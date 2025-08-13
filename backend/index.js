@@ -4,8 +4,9 @@ import urlRoutes from './routes/url.routes.js';
 import connectDB from './connect.js';
 
 const app = express();
+app.use(express.json());
 
-connectDB("moongodb://localhost:27017/urlShortener")
+connectDB()
   .then(() => console.log("Connected to MongoDB"))
   .catch(err => console.error("Failed to connect to MongoDB", err));
 app.use(express.json());

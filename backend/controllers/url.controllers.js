@@ -11,7 +11,7 @@ async function handleShortenUrl(req, res) {
 
   try {
     const newUrl = new Url({ originalUrl: body.originalUrl, shortUrl });
-    await newUrl.create();
+    await newUrl.save();
     res.status(201).json({ shortUrl: `http://short.url/${shortUrl}` });
   } catch (error) {
     res.status(500).json({ error: "Failed to shorten URL" });
