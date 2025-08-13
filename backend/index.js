@@ -4,6 +4,8 @@ import urlRoutes from './routes/url.routes.js';
 import connectDB from './connect.js';
 import urlSchema from './models/url.model.js'; 
 
+
+// checking for the git push 
 const app = express();
 app.use(express.json());
 
