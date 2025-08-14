@@ -1,5 +1,5 @@
 import express from 'express';
-import PORT from './config.js';
+// import PORT from './config.js';
 import urlRoutes from './routes/url.routes.js';
 import connectDB from './connect.js';
 import cors from 'cors';
@@ -9,6 +9,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
+
+const PORT = process.env.PORT || 3000;
 
 connectDB()
   .then(() => console.log("Connected to MongoDB ✅"))
@@ -23,7 +25,6 @@ app.get('/', (req, res) => {
   res.send('Welcome to the URL Shortener API');
 });
 
-app.listen(PORT || process.env.PORT || 3000, () => {
-  console.log(`Server is on: http://localhost:${PORT || process.env.PORT || 3000}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
-
