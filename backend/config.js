@@ -1,2 +1,2 @@
-const PORT = 8002;
+const PORT = process.env.PORT || 8000;
 export default PORT;
