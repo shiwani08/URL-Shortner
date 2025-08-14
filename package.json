@@ -1,16 +1,24 @@
 {
-  "name": "backend",
+  "name": "url-shortner",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple URL shortening service that takes a long URL and returns a unique, shortened URL.   Built with **Node.js**, **Express**, and **MongoDB**.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiwani08/URL-Shortner.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
+  "bugs": {
+    "url": "https://github.com/shiwani08/URL-Shortner/issues"
+  },
+  "homepage": "https://github.com/shiwani08/URL-Shortner#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
