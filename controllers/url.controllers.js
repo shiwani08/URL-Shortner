@@ -11,7 +11,7 @@ export async function handleShortenUrl(req, res) {
 
   try {
     const shortId = nanoid(7);
-    const fullShortUrl = `http://shiwani.url/${shortId}`;
+    const fullShortUrl = `http://url-shortner-jj7v.onrender.com/${shortId}`;
     const newUrl = new Url({ originalUrl: body.originalUrl, shortId, shortUrl: fullShortUrl });
     await newUrl.save();
     res.status(201).json({ shortUrl: fullShortUrl });
