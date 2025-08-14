@@ -9,12 +9,12 @@ const urlSchema = new mongoose.Schema(
     shortId: {
       type: String,
       required: true,
-      unique: true, 
+      unique: true,
     },
     shortUrl: {
       type: String,
       required: true,
-      unique: true, 
+      unique: true,
     },
     createdAt: {
       type: Date,
