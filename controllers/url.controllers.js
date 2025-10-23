@@ -30,6 +30,17 @@ export async function handleGetAllUrls(req, res) {
   }
 }
 
+// GET /user/:id
+export async function handleGetUrlsByUserId(req, res) {
+  const userId = req.params.id;
+  try {
+    const urls = await Url.find({ userId });
+    res.status(200).json(urls);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch URLs for the user" });
+  }
+}
+
 // GET /:shortId - Redirect to original URL
 export async function handleRedirectShortUrl(req, res) {
   const shortId = req.params.shortId;

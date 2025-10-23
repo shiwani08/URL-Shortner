@@ -1,5 +1,4 @@
 import express from 'express';
-// import PORT from './config.js';
 import urlRoutes from './routes/url.routes.js';
 import connectDB from './connect.js';
 import cors from 'cors';
