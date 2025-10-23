@@ -1,5 +1,5 @@
 import express from "express";
-import { handleShortenUrl, handleGetAllUrls, handleRedirectShortUrl, handleGetUrlsByUserId } from "../controllers/url.controllers.js";
+import { handleShortenUrl, handleGetAllUrls, handleRedirectShortUrl, handleGetUrlsByUserId, handleUpdateUserId } from "../controllers/url.controllers.js";
 
 const router = express.Router();
 
@@ -14,5 +14,7 @@ router.get("/user/:id", handleGetUrlsByUserId);
 
 // Redirect short URL to original
 router.get("/:shortId", handleRedirectShortUrl);
+
+router.patch("/:shortId/:id", handleUpdateUserId);
 
 export default router;
